@@ -1,0 +1,17 @@
+{
+  "db": "starosta_helper",
+  "login": "starosta_helper",
+  "password": "starosta_helper",
+  "port": 1433,
+  "host": "ANDREICHAYEUSKI",
+  "dialect": "mssql",
+  "dialectOptions": {
+    "instanceName": "MSSQLSERVER",
+    "encrypt": true,
+    "requestTimeout": 30000
+  },
+  "define": {
+    "timestamps": true,
+    "paranoid": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "starosta-helper",
+  "version": "1.0.0",
+  "dependencies": {
+    "iconv-lite": "^0.4.24",
+    "readline-sync": "^1.4.9",
+    "sequelize": "^4.42.0",
+    "tedious": "^5.0.3"
+  }
+}
