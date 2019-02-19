@@ -2,7 +2,9 @@ const Sequelize = require("sequelize");
 
 const db = require('./db/db')(Sequelize);
 const marking = require('./marking-tool');
-
+console.log(1);
+console.log(process.argv[2].toString());
+console.log(2);
 (async () =>
 {
 	db.sequelize.sync();
@@ -32,7 +34,7 @@ function addToDB(db, dictionary) {
 		if (item.isMarking) {
 			var date = new Date();
 			date = date.getFullYear() + '-' + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + ('0' + date.getDate()).slice(-2);
-			db.history.create({Date: date, Description: "test"})
+			db.history.create({Date: date, Description: process.argv[2]})
 				.then((result) => {
 					var history = result;
 					db.manHistory.create({HistoryID: history.ID, ManId: parseInt(item.name)})
